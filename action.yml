@@ -1,0 +1,12 @@
+name: 'Response action test'
+description: 'Query server for results of action
+inputs:
+  url:  # id of input
+    description: 'URL to query'
+    required: true
+outputs:
+  result: # id of output
+    description: 'The test result'
+runs:
+  using: 'node16'
+  main: 'index.js'
