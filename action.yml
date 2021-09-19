@@ -1,5 +1,5 @@
 name: 'Response action test'
-description: 'Query server for results of action
+description: 'Query server for results of action'
 inputs:
   url:  # id of input
     description: 'URL to query'
