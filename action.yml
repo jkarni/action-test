@@ -8,5 +8,5 @@ outputs:
   result: # id of output
     description: 'The test result'
 runs:
-  using: 'node16'
+  using: 'node12'
   main: 'index.js'
