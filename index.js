@@ -8,8 +8,10 @@ try {
 
   github.context.repo.owner
   const baseUrl = core.getInput('url');
+  const token = core.getInput('token');
+  const tokenStr = typeof token === 'undefined' ? "" : "?token=" + token;
   const url = baseUrl + github.context.repo.owner + "/"
-         + github.context.repo.repo + "/commit/" + github.context.sha;
+         + github.context.repo.repo + "/commit/" + github.context.sha + tokenStr ;
   console.log(`Querying ${url}!`);
   let result = "success";
   request.post(url, (err, response, body) => {
