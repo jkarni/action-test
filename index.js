@@ -4,9 +4,6 @@ const request = require('request');
 
 try {
   const payload = JSON.stringify(github.context.payload, undefined, 2)
-  console.log(`The event payload: ${payload}`);
-
-  github.context.repo.owner
   const baseUrl = core.getInput('url');
   const token = core.getInput('token');
   const tokenStr = typeof token === 'undefined' ? "" : "?token=" + token;
