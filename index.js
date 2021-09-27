@@ -17,7 +17,7 @@ try {
       result = "failure";
       core.setFailed("Server says bad!")
     } else {
-      response.text().then((t) => core.info(t));
+      core.info(body);
     }
   })
   core.setOutput("result", result);
